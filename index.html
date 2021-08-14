@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG LoR</title>
-    <script src="./index.js"></script>
-    <script src="./anao.js"></script>
-    <script src="./elfo.js"></script>
-    <script src="./fimdejogo.js"></script>
-    <script src="./humano.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/dwarf.js"></script>
+    <script src="./js/elfo.js"></script>
+    <script src="./js/humano.js"></script>
+    <script src="./js/fimdejogo.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
-<body>
-    <div id="container-imagem"> 
 
-        <img src="gif-ring.gif" alt="gif-background" />
-        <button onclick="start()">Let's Start !</button>
+<body>  
+    <main>   
+        <div class="container-imagem">
+            <div>
+                <h1>
+                    The history of Middle-earth, as described in The Silmarillion, began when the Ainur entered Arda, following
+                    the creation events in the Ainulindalë and long ages of labour throughout Eä, the fictional universe. Time
+                    from that point was measured using Valian Years, though the subsequent history of Arda was divided into
+                    three time periods using different years, known as the Years of the Lamps, the Years of the Trees and the
+                    Years of the Sun. A separate, overlapping chronology divides the history into 'Ages of the Children of
+                    Ilúvatar'. The first such Age began with the Awakening of the Elves during the Years of the Trees (by which
+                    time the Ainur had already long inhabited Arda) and continued for the first six centuries of the Years of
+                    the Sun. All the subsequent Ages took place during the Years of the Sun.
+            
+                    Arda is, as critics have noted, "our own green and solid Earth at some quite remote epoch in the past." As
+                    such, it has not only an immediate story but a history, and the whole thing is an "imagined prehistory" of
+                    the Earth as it is now.
+                </h1>
+            </div>
+            
+            <img src="./assets/Logo-LoR.png" alt="Logo-LoR" />
+
+            <div class="wrap">
+
+                <button class="button" onclick="start()">Let's Start !</button>
+
+            </div>
+        </div>
+    </main>
     
+
+    <div>
+        <footer class="footer">
+            © 2021<a href="https://www.linkedin.com/in/elderschmoeller/">Elder S. Schmöeller .</a>All rights reserved.
+        </footer>
     </div>
 </body>
+
 </html>

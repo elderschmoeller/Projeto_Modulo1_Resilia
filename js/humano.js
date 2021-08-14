@@ -1,3 +1,3 @@
-function humano1(){
-    
+function humano(){
+    myText = 'humano - seres mortais, paixão pela vida, vulneraveis'
 }
