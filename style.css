@@ -6,11 +6,13 @@
   }
   .container-imagem {
     flex-direction: column;
-    align-items: center;
-
+    width: 100%;
+    font-size: 25px;
+    padding: 10px;
   }
 
 }
+
 @keyframes ring {
   0% {
     width: 30px;
@@ -30,11 +32,14 @@
 body {
   background: linear-gradient(180deg,  #313131 0%,  #777777 100%);
   font-family: 'Cinzel', serif;
+  margin: 50px 100px 10px 100px;
 }
 
 #titulo-gameover {
   font-family: 'Cinzel', serif;
 }
+
+
 
 h1 {
   color: #bca432;
@@ -42,7 +47,10 @@ h1 {
   margin-bottom: 50px;
   letter-spacing: 2px;
 }
-
+h1::selection {
+  color: #bca432;
+  background-color: #333;
+}
 h2 {
   color: #bca432;
   font-family: 'Cinzel', serif;
@@ -50,13 +58,22 @@ h2 {
   margin-bottom: 50px;
   letter-spacing: 2px;
 }
-
+h2::selection {
+  color: #bca432;
+  background-color: #333;
+}
 h4 {
   color: #bca432;
   font-family: 'Cinzel', serif;
   letter-spacing: 2px;
   text-align: center;
 }
+h4::selection {
+  color: #bca432;
+  background-color: #333;
+}
+
+
 
 p {
   color: #bca432;
@@ -64,6 +81,12 @@ p {
   margin-bottom: 50px;
   letter-spacing: 2px;
 }
+p::selection {
+  color: #bca432;
+  background-color: #333;
+}
+
+
 
 a {
   color: #bca432;
@@ -72,13 +95,23 @@ a {
   letter-spacing: 3px;
   text-align: center;
 }
-
-
-
+a::selection {
+  color: #bca432;
+  background-color: #333;
+}
 a:hover {
   font-size: 25px;
   transition: 100ms;
 }
+
+
+
+u::selection {
+  color: #bca432;
+  background-color: #333;
+}
+
+
 
 .container-imagem {
   max-height: 100%;
@@ -180,6 +213,11 @@ a:hover {
   text-align: center;
   font-family: 'Cinzel', serif;
 }
+
+.footer::selection {
+  color: #bca432;
+  background-color: #333;
+}
                               /*Final rodapé*/
                               /*Personagens*/
 
@@ -190,8 +228,6 @@ a:hover {
     font-family: sans-serif;
     align-items: center;
 }
-
-
 #image-char {
     display: flex;
     max-width: 169px;
@@ -202,7 +238,6 @@ a:hover {
     flex-direction: column;
     justify-content: center;
 }
-
 #image-char:hover {
     cursor: pointer;
 }
