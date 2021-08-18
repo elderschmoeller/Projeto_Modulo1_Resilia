@@ -1,4 +1,16 @@
+@media only screen and (max-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-imagem {
+    flex-direction: column;
+    align-items: center;
 
+  }
+
+}
 @keyframes ring {
   0% {
     width: 30px;
@@ -11,27 +23,220 @@
     opacity: 0;
   }
 }
-body {
+* {
   margin: 0;
+}
+
+body {
   background: linear-gradient(180deg,  #313131 0%,  #777777 100%);
+  font-family: 'Cinzel', serif;
+}
+
+#titulo-gameover {
+  font-family: 'Cinzel', serif;
 }
 
 h1 {
   color: #bca432;
-  font-family: 'Tangerine', cursive;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  color: #bca432;
+  font-family: 'Cinzel', serif;
+  padding-top: 100px;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+h4 {
+  color: #bca432;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+p {
+  color: #bca432;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+a {
+  color: #bca432;
+  font-family: 'Cinzel', serif;
+  font-size: 25px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+
+
+a:hover {
+  font-size: 25px;
+  transition: 100ms;
 }
 
 .container-imagem {
+  max-height: 100%;
+  max-width: 100%;
   text-align: center;
-  padding: 27vh;
-  
+  display: block;
+  padding-bottom: 0px;
+  padding-left: 0px;
 }
+
+
+                         /* Inicio Botão de Start */
+
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#iniciar {
+  min-width: 200px;
+  min-height: 40px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: linear-gradient(180deg,  #bca432 0%,  #7a6a19 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 0px 0px 50px  #79691a;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  top: 90px;
+}
+  
+#iniciar::before {
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid  #bca432;
+  box-shadow: 0 0 60px  #bca432;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+  }
+  
+#iniciar:hover, #iniciar:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+#iniciar:hover::before, #iniciar:focus::before {
+  opacity: 1;
+}
+
+#iniciar::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #bca432;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+#iniciar:hover::after, #iniciar:focus::after {
+  animation: none;
+  display: none;
+}
+                            /* Final botão de Start*/
+
+                            /* Inicio rodapé*/
+.footer {
+  margin-top: 15px;
+  padding: 15px;
+  color:  #bca432;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+}
+
+.footer a {
+  margin-top: 15px;
+  padding: 15px;
+  color:  #bca432;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+}
+                              /*Final rodapé*/
+                              /*Personagens*/
+
+
+#char-select {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    align-items: center;
+}
+
+
+#image-char {
+    display: flex;
+    max-width: 169px;
+    max-height: 180px;
+    width: auto;
+    height: auto;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#image-char:hover {
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .imagem-principal {
+        width: 100%;
+    }
+
+    #char-select {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #image-char {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .footer {
+        display: flex;
+    }
+  }
+                           /* Inicio Botão de confirmar personagem */
+
 
 .wrap {
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .button {
@@ -52,10 +257,10 @@ h1 {
   outline: none;
   position: relative;
   padding: 10px;
-  top: 130px;
+  top: 90px;
 }
   
-button::before {
+.button::before {
   content: '';
   border-radius: 1000px;
   min-width: calc(300px + 12px);
@@ -75,11 +280,11 @@ button::before {
   transform: translateY(-6px);
 }
 
-button:hover::before, button:focus::before {
+.button:hover::before, .button:focus::before {
   opacity: 1;
 }
 
-button::after {
+.button::after {
   content: '';
   width: 30px; height: 30px;
   border-radius: 100%;
@@ -89,28 +294,11 @@ button::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: ring 1.5s infinite;
+
 }
 
-button:hover::after, button:focus::after {
+.button:hover::after, .button:focus::after {
   animation: none;
   display: none;
 }
-
-.footer {
-  margin-top: 15px;
-  padding: 15px;
-  color:  #bca432;
-  text-align: center;
-  font-family: 'Tangerine', cursive;
-  font-size: 32px;
-}
-
-.footer a {
-  margin-top: 15px;
-  padding: 15px;
-  color:  #bca432;
-  text-align: center;
-  font-family: 'Montserrat Alternates', sans-serif;
-}
-
+                            /* Final botão de confirmar personagem*/
